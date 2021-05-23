@@ -1,0 +1,2 @@
+pause~=0.3
+influxdb-client~=1.17.0

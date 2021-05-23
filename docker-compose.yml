@@ -1,0 +1,16 @@
+version: "3"
+services:
+  influxdb:
+    container_name: influx_db_service
+    build:
+      context: .
+      dockerfile: influxdb_service/Dockerfile
+  dash_app:
+    build:
+      context: .
+      dockerfile: dash_app/Dockerfile
+    ports: [8050:8050]
+  ingestion_app:
+    build:
+      context: .
+      dockerfile: ingestion_app/Dockerfile
